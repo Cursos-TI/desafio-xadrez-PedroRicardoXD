@@ -1,32 +1,31 @@
 #include <stdio.h>
 
-// Desafio de Xadrez - MateCheck
-// Este código inicial serve como base para o desenvolvimento do sistema de movimentação das peças de xadrez.
-// O objetivo é utilizar estruturas de repetição e funções para determinar os limites de movimentação dentro do jogo.
-
 int main() {
-    // Nível Novato - Movimentação das Peças
-    // Sugestão: Declare variáveis constantes para representar o número de casas que cada peça pode se mover.
 
-    // Implementação de Movimentação do Bispo
-    // Sugestão: Utilize uma estrutura de repetição para simular a movimentação do Bispo em diagonal.
+    int i; 
+    int casasTorre = 5;
+    int casasBispo = 5; 
+    int casasRainha = 8;
 
-    // Implementação de Movimentação da Torre
-    // Sugestão: Utilize uma estrutura de repetição para simular a movimentação da Torre para a direita.
+    printf("Movimento da torre do xadrez:\n");
+    for (i=1; i <= casasTorre; i++)//Repete "i" enquanto "i" for menor ou igual a 5, e incrementa "i" a cada volta
 
-    // Implementação de Movimentação da Rainha
-    // Sugestão: Utilize uma estrutura de repetição para simular a movimentação da Rainha para a esquerda.
+    {
+        printf("torre movimentando para a direita %d\n", i); 
+    }    
 
-    // Nível Aventureiro - Movimentação do Cavalo
-    // Sugestão: Utilize loops aninhados para simular a movimentação do Cavalo em L.
-    // Um loop pode representar a movimentação horizontal e outro vertical.
-
-    // Nível Mestre - Funções Recursivas e Loops Aninhados
-    // Sugestão: Substitua as movimentações das peças por funções recursivas.
-    // Exemplo: Crie uma função recursiva para o movimento do Bispo.
-
-    // Sugestão: Implemente a movimentação do Cavalo utilizando loops com variáveis múltiplas e condições avançadas.
-    // Inclua o uso de continue e break dentro dos loops.
+    printf("Movimento do bispo no xadrez:\n");//  Movimenta o bispo 5 casas cima direita fazendo assim a diagonal
+    i = 1;
+    while (i <= casasBispo){ // só entra se for verdadeira a condição
+        printf("Bispo movimentou na diagonal para cima e para a direita até avançar %d\n",i);
+        i++; }
+    
+    printf("Movimento da rainha no xadrez:\n");
+    i = 1;
+    do{ // entra uma vez de qualquer jeito, depois pergunta se vai de novo 
+        printf("Rainha movimentando para a esquerda %d\n", i);
+        i++;
+    } while(i <= casasRainha);
 
     return 0;
 }
